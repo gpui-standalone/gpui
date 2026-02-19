@@ -1,6 +1,5 @@
 use bitflags::bitflags;
 use thiserror::Error;
-use wayland_protocols_wlr::layer_shell::v1::client::{zwlr_layer_shell_v1, zwlr_layer_surface_v1};
 
 use crate::Pixels;
 
@@ -22,17 +21,6 @@ pub enum Layer {
     Overlay,
 }
 
-impl From<Layer> for zwlr_layer_shell_v1::Layer {
-    fn from(layer: Layer) -> Self {
-        match layer {
-            Layer::Background => Self::Background,
-            Layer::Bottom => Self::Bottom,
-            Layer::Top => Self::Top,
-            Layer::Overlay => Self::Overlay,
-        }
-    }
-}
-
 bitflags! {
     /// Screen anchor point for layer_shell surfaces. These can be used in any combination, e.g.
     /// specifying `Anchor::LEFT | Anchor::RIGHT` will stretch the surface across the width of the
@@ -50,12 +38,6 @@ bitflags! {
     }
 }
 
-impl From<Anchor> for zwlr_layer_surface_v1::Anchor {
-    fn from(anchor: Anchor) -> Self {
-        Self::from_bits_truncate(anchor.bits())
-    }
-}
-
 /// Keyboard interactivity mode for the layer_shell surfaces.
 #[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 pub enum KeyboardInteractivity {
@@ -70,16 +52,6 @@ pub enum KeyboardInteractivity {
     /// The surface can be focused similarly to a normal window.
     #[default]
     OnDemand,
-}
-
-impl From<KeyboardInteractivity> for zwlr_layer_surface_v1::KeyboardInteractivity {
-    fn from(value: KeyboardInteractivity) -> Self {
-        match value {
-            KeyboardInteractivity::None => Self::None,
-            KeyboardInteractivity::Exclusive => Self::Exclusive,
-            KeyboardInteractivity::OnDemand => Self::OnDemand,
-        }
-    }
 }
 
 /// Options for creating a layer_shell window.
