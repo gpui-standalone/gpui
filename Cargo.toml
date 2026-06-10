@@ -1,6 +1,6 @@
 [package]
 name = "gpui-standalone"
-version = "1.5.4"
+version = "1.5.5"
 authors = ["Nathan Sobo <nathan@zed.dev>"]
 description = "Zed's GPU-accelerated UI framework"
 repository = "https://github.com/zed-industries/zed"
@@ -111,17 +111,17 @@ async-task = "^4.7"
 backtrace = {version = "^0.3", optional = true}
 bitflags = {version = "^2.6.0", optional = true}
 chrono = {version = "^0.4", features = ["serde"]}
-collections = {package = "collections-gpui-standalone", version = "1.5.4"}
+collections = {package = "collections-gpui-standalone", version = "1.5.5"}
 ctor = "^1.0.6"
 derive_more = {version = "^2.1.1", features = ["add", "add_assign", "deref", "deref_mut", "display", "from_str", "mul", "mul_assign", "not"]}
 etagere = "^0.2"
 futures = "^0.3.32"
 futures-concurrency = "^7.7.1"
-gpui_macros = {package = "gpui_macros-gpui-standalone", version = "1.5.4"}
-gpui_shared_string = {package = "gpui_shared_string-gpui-standalone", version = "1.5.4"}
-gpui_util = {package = "gpui_util-gpui-standalone", version = "1.5.4"}
+gpui_macros = {package = "gpui_macros-gpui-standalone", version = "1.5.5"}
+gpui_shared_string = {package = "gpui_shared_string-gpui-standalone", version = "1.5.5"}
+gpui_util = {package = "gpui_util-gpui-standalone", version = "1.5.5"}
 hdrhistogram = {version = "^7", optional = true}
-http_client = {package = "http_client-gpui-standalone", version = "1.5.4"}
+http_client = {package = "http_client-gpui-standalone", version = "1.5.5"}
 image = "^0.25.1"
 inventory = "^0.3.19"
 itertools = "^0.14.0"
@@ -136,10 +136,10 @@ postage = {version = "^0.5", features = ["futures-traits"]}
 profiling = "^1"
 rand = "^0.9"
 raw-window-handle = "^0.6"
-refineable = {package = "refineable-gpui-standalone", version = "1.5.4"}
+refineable = {package = "refineable-gpui-standalone", version = "1.5.5"}
 regex = "^1.5"
 resvg = {version = "^0.45.0", default-features = false, features = ["text", "system-fonts", "memmap-fonts", "raster-images"]}
-scheduler = {package = "scheduler-gpui-standalone", version = "1.5.4"}
+scheduler = {package = "scheduler-gpui-standalone", version = "1.5.5"}
 schemars = {version = "^1.0", features = ["indexmap2"]}
 seahash = "^4.1"
 serde = {version = "^1.0.221", features = ["derive", "rc"]}
@@ -149,13 +149,13 @@ smallvec = {version = "^1.6", features = ["union", "const_new"]}
 spin = "^0.10.0"
 stacksafe = "^0.1"
 strum = {version = "^0.27.2", features = ["derive"]}
-sum_tree = {package = "sum_tree-gpui-standalone", version = "1.5.4"}
+sum_tree = {package = "sum_tree-gpui-standalone", version = "1.5.5"}
 taffy = "=0.10.1"
 thiserror = "^2.0.12"
 ttf-parser = "^0.25"
 url = "^2.2"
 usvg = {version = "^0.45.0", default-features = false}
-util_macros = {package = "util_macros-gpui-standalone", version = "1.5.4"}
+util_macros = {package = "util_macros-gpui-standalone", version = "1.5.5"}
 uuid = {version = "^1.1.2", features = ["v4", "v5", "v7", "serde"]}
 waker-fn = "^1.2.0"
 web-time = "^1.1.0"
@@ -186,7 +186,7 @@ font-kit = {version = "^0.14.1-zed", package = "zed-font-kit", optional = true}
 foreign-types = "^0.5"
 log = {version = "^0.4.16", features = ["kv_unstable_serde", "serde"]}
 mach2 = "^0.5"
-media = {package = "media-gpui-standalone", version = "1.5.4"}
+media = {package = "media-gpui-standalone", version = "1.5.5"}
 metal = "^0.33"
 objc = "^0.2"
 objc2 = {version = "^0.6", optional = true}
